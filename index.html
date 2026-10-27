@@ -21,6 +21,14 @@
     </header>
 
     <main class="workspace">
+
+<section class="planet-stage" aria-label="Planetary monitor">
+  <div class="stage-head"><span>00 / PLANETARY OBSERVATORY</span><span id="planet-state">LIVE SOURCE CHECK</span></div>
+  <div class="planet-grid">
+    <div class="planet-image"><img id="earth-photo" alt="Latest NOAA GOES-19 full-disk satellite image of the Atlantic-facing hemisphere" src="https://cdn.star.nesdis.noaa.gov/GOES19/ABI/FD/GEOCOLOR/339x339.jpg"><div class="planet-caption"><strong>EARTH / GEOSTATIONARY VIEW</strong><span id="photo-status">NOAA image · latest available, not real-time</span></div></div>
+    <div class="orbit-column"><div class="orbit-label">INTERNATIONAL SPACE STATION</div><div class="orbit-number" id="iss-position">Awaiting position…</div><div class="orbit-sub" id="iss-stats">Position updates every 60 seconds</div><div class="orbit-track"><div id="orbit-spot" class="orbit-spot"></div><span>ISS LONGITUDE / -180° TO +180°</span></div><div class="orbit-label margin-top">NASA / ACTIVE NATURAL EVENTS</div><div class="orbit-number" id="nature-count">—</div><div class="orbit-sub" id="nature-status">Wildfires · storms · volcanoes · other events</div><div id="nature-list" class="nature-list"><div class="nature-entry">Loading NASA EONET feed…</div></div></div>
+  </div>
+</section>
       <section class="metric-row" aria-label="Overview">
         <div class="metric"><div class="metric-label">EARTHQUAKES <span id="window-label">/ 24H · M2.5+</span></div><div class="metric-value" id="stat-count">--</div><div class="metric-foot" id="stat-count-foot">USGS LIVE FEED</div></div>
         <div class="metric"><div class="metric-label">STRONGEST MAGNITUDE</div><div class="metric-value" id="stat-largest">--</div><div class="metric-foot" id="stat-largest-foot">AWAITING DATA</div></div>
@@ -372,5 +380,6 @@
     <footer><span>EARTH OBSERVATORY // STATIC DASHBOARD / NO HOME SERVER REQUIRED</span><span>DATA: <a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php" target="_blank" rel="noopener">USGS</a> · <a href="https://www.swpc.noaa.gov/" target="_blank" rel="noopener">NOAA</a> · <a href="https://open-meteo.com/" target="_blank" rel="noopener">OPEN-METEO</a></span></footer>
   </div>
   <script src="app.js"></script>
+  <script src="planet.js"></script>
 </body>
 </html>
